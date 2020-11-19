@@ -14,6 +14,9 @@
     height: 100vh;
     background-color:#68a62e;
 }
+.AboutUs h1{
+    background-color:#3f6609;
+}
 .sidePhoto{
     background: linear-gradient(to bottom,rgba(22, 22, 22, 0.5), rgba(56, 56, 56, 0.5)),url('Photos/PandaSide1.jpg') no-repeat center ;
     background-size: cover;
