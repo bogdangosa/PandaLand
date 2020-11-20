@@ -1,4 +1,6 @@
-
+html{
+    scroll-behavior: smooth;
+}
 .navbar{
     opacity: 0.9;
     background-color:#68a62e;
@@ -26,6 +28,10 @@
     width: 100%;
     min-height: 100vh;
     background-color:#68a62e;
+}
+.Galery h1{
+    text-align: center;
+    background-color:#59910a;
 }
 .galeryContainer{
     width: 100%;
@@ -64,5 +70,8 @@
     }
     .display-2{
         font-size: 2rem;
+    }
+    .contact-info{
+        flex-direction: column;
     }
 }
