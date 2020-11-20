@@ -38,3 +38,40 @@ function ChangeGaleryMode(e){
     });
 
 }
+
+let timer = 0;
+
+window.addEventListener('load',function(){
+    let intersectionObserverSlide = new IntersectionObserver(entries =>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                timer+=100;
+                setTimeout(function(){entry.target.classList.add('slideinAnimationUp');},timer);
+                intersectionObserverSlide.unobserve(entry.target);
+                setTimeout(function(){timer=0},1000);
+            }
+        });
+    });
+
+    document.querySelectorAll('.slideinAnimation').forEach(obj=>{
+        intersectionObserverSlide.observe(obj);
+    });
+
+
+    let intersectionObserverFade = new IntersectionObserver(entries =>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                timer+=100;
+                setTimeout(function(){entry.target.classList.add('fadeinAnimationUp');},timer);
+                intersectionObserverFade.unobserve(entry.target);
+                setTimeout(function(){timer=0},1000);
+            }
+        });
+    });
+
+    document.querySelectorAll('.fadeinAnimation').forEach(obj=>{
+        intersectionObserverFade.observe(obj);
+    });
+
+});
+

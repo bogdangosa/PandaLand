@@ -42,7 +42,7 @@ html{
     height: 80%;
 }
 .card-img-top{
-    transition:1s;
+    transition:1s ease;
 }
 
 .card-img-top:hover{
@@ -83,4 +83,22 @@ html{
 
 .hide{
     display: none;
+}
+
+.slideinAnimation{
+    transform: translateY(+100px);
+}
+
+.slideinAnimationUp{
+    transform: translateY(0);
+    transition: transform ease 1s;
+}
+
+.fadeinAnimation{
+    opacity: 0;
+}
+
+.fadeinAnimationUp{
+    opacity: 1;
+    transition: opacity ease 1s;
 }
